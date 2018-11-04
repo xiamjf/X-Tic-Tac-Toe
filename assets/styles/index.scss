@@ -1,1 +1,23 @@
 @import '~bootstrap/scss/bootstrap';
+
+$background-color: #800080;
+$row-color: #800080;
+$border-color: #fff;
+$square-color: #ffc0bc;
+
+.gameboard {
+  display: flex;
+  margin: 0 auto;
+  width: 450px;
+  }
+
+.row {
+  clear: both;
+}
+
+.square {
+  background-color: $square-color;
+  border: 1px solid $border-color;
+  height: 150px;
+  width: 150px;
+}
