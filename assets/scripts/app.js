@@ -34,11 +34,52 @@ $(() => {
       // player 1 goes and then switches to player 2
       if (player === 1) {
         currentSquare.addClass('letter-x')
+        checkWin(player)
         player = 2
       } else {
         currentSquare.addClass('letter-o')
+        checkWin(player)
         player = 1
       }
     }
   })
+
+  // this function is placed above the line that switches to the next player
+  // before going on to the next move, check if the game has been won
+  // I would mark the boards as won if the setup matched one of the 16 win setups
+  // (there are 8 ways for either player to win [=- ||| or /\])
+  // but let's see how they do it
+
+  /*
+  They're doing it the same way as me! However since we've already split the
+  player into variables, we just need to check 8 board setups
+  */
+  // I am  confused as to whether my logic is correct
+  // I believe passing in player as an argument would also make sense, since
+  // player 1 is always X and player 2 is always O
+  // But I guess it is a function of the letter or symbol, this function
+  // depends on a winning set of symbols not a winning set of player moves,
+  // although these are essentially the same thing here, it is not as clear
+
+  const checkWin = function (letter) {
+    if ($('sq1').hasClass(letter) && $('sq2').hasClass(letter) && $('sq3').hasClass(letter)) {
+      return true
+    } else if ($('sq4').hasClass(letter) && $('sq5').hasClass(letter) && $('sq6').hasClass(letter)) {
+      return true
+    } else if ($('sq7').hasClass(letter) && $('sq8').hasClass(letter) && $('sq9').hasClass(letter)) {
+      return true
+    } else if ($('sq1').hasClass(letter) && $('sq4').hasClass(letter) && $('sq7').hasClass(letter)) {
+      return true
+    } else if ($('sq2').hasClass(letter) && $('sq5').hasClass(letter) && $('sq8').hasClass(letter)) {
+      return true
+    } else if ($('sq3').hasClass(letter) && $('sq6').hasClass(letter) && $('sq9').hasClass(letter)) {
+      return true
+    } else if ($('sq1').hasClass(letter) && $('sq5').hasClass(letter) && $('sq9').hasClass(letter)) {
+      return true
+    } else if ($('sq3').hasClass(letter) && $('sq5').hasClass(letter) && $('sq7').hasClass(letter)) {
+      return true
+    } else {
+      return false
+    }
+  }
 })
