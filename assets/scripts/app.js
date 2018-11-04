@@ -12,5 +12,7 @@
 $(() => {
   // your JS code goes here
   // making the squares DO SOMETHING when clicked
-
+  $('.square').on('click', function (event) {
+    alert('add symbol here')
+  })
 })
