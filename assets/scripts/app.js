@@ -28,18 +28,24 @@ $(() => {
     // the class added will be an X or an O depending on the player
     // Check if a box already has a class added (which means it has been clicked)
     if (currentSquare.hasClass('letter-x') || currentSquare.hasClass('letter-o')) {
-      alert('BOOP! Square selected. Try another square')
-    } else {
+      alert('Game Over! Issa Tie')
       // this is what happens when a square is empty
       // player 1 goes and then switches to player 2
+    } else {
       if (player === 1) {
         currentSquare.addClass('letter-x')
-        checkWin(player)
-        player = 2
+        if (checkWin('letter-x')) {
+          alert('Good job Player ' + player + ', you won!')
+        } else {
+          player = 2
+        }
       } else {
         currentSquare.addClass('letter-o')
-        checkWin(player)
-        player = 1
+        if (checkWin('letter-o')) {
+          alert('Good job Player ' + player + ', you won!')
+        } else {
+          player = 1
+        }
       }
     }
   })
@@ -62,21 +68,21 @@ $(() => {
   // although these are essentially the same thing here, it is not as clear
 
   const checkWin = function (letter) {
-    if ($('sq1').hasClass(letter) && $('sq2').hasClass(letter) && $('sq3').hasClass(letter)) {
+    if ($('#sq1').hasClass(letter) && $('#sq2').hasClass(letter) && $('#sq3').hasClass(letter)) {
       return true
-    } else if ($('sq4').hasClass(letter) && $('sq5').hasClass(letter) && $('sq6').hasClass(letter)) {
+    } else if ($('#sq4').hasClass(letter) && $('#sq5').hasClass(letter) && $('#sq6').hasClass(letter)) {
       return true
-    } else if ($('sq7').hasClass(letter) && $('sq8').hasClass(letter) && $('sq9').hasClass(letter)) {
+    } else if ($('#sq7').hasClass(letter) && $('#sq8').hasClass(letter) && $('#sq9').hasClass(letter)) {
       return true
-    } else if ($('sq1').hasClass(letter) && $('sq4').hasClass(letter) && $('sq7').hasClass(letter)) {
+    } else if ($('#sq1').hasClass(letter) && $('#sq4').hasClass(letter) && $('#sq7').hasClass(letter)) {
       return true
-    } else if ($('sq2').hasClass(letter) && $('sq5').hasClass(letter) && $('sq8').hasClass(letter)) {
+    } else if ($('#sq2').hasClass(letter) && $('#sq5').hasClass(letter) && $('#sq8').hasClass(letter)) {
       return true
-    } else if ($('sq3').hasClass(letter) && $('sq6').hasClass(letter) && $('sq9').hasClass(letter)) {
+    } else if ($('#sq3').hasClass(letter) && $('#sq6').hasClass(letter) && $('#sq9').hasClass(letter)) {
       return true
-    } else if ($('sq1').hasClass(letter) && $('sq5').hasClass(letter) && $('sq9').hasClass(letter)) {
+    } else if ($('#sq1').hasClass(letter) && $('#sq5').hasClass(letter) && $('#sq9').hasClass(letter)) {
       return true
-    } else if ($('sq3').hasClass(letter) && $('sq5').hasClass(letter) && $('sq7').hasClass(letter)) {
+    } else if ($('#sq3').hasClass(letter) && $('#sq5').hasClass(letter) && $('#sq7').hasClass(letter)) {
       return true
     } else {
       return false

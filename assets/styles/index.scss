@@ -13,6 +13,7 @@ h1 {
 
 .gameboard {
   display: flex;
+  flex-wrap: wrap;
   margin: 0 auto;
   width: 450px;
   }
