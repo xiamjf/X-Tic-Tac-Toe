@@ -4,6 +4,12 @@ $background-color: #800080;
 $row-color: #800080;
 $border-color: #fff;
 $square-color: #ffc0bc;
+$letter-x-color: #4e1863;
+$letter-o-color: #5199f7;
+
+h1 {
+  text-align: center;
+}
 
 .gameboard {
   display: flex;
@@ -21,4 +27,12 @@ $square-color: #ffc0bc;
   cursor: pointer;
   height: 150px;
   width: 150px;
+}
+
+.letter-o {
+  background-color: $letter-o-color;
+}
+
+.letter-x {
+  background-color: $letter-x-color;
 }
