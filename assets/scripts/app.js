@@ -16,6 +16,7 @@ $(() => {
   // either player 1 or player 2
   // whether the X or O shows up will be determined by the class that this variable
   // indicates to the square
+  // Gameplay should only work when the board is PLAYABLE
   let player = 1
   // making the squares DO SOMETHING when clicked
   $('.square').on('click', function (event) {
@@ -60,7 +61,7 @@ $(() => {
   They're doing it the same way as me! However since we've already split the
   player into variables, we just need to check 8 board setups
   */
-  // I am  confused as to whether my logic is correct
+  // I am confused as to whether my logic is correct
   // I believe passing in player as an argument would also make sense, since
   // player 1 is always X and player 2 is always O
   // But I guess it is a function of the letter or symbol, this function

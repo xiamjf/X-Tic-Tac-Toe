@@ -2,7 +2,7 @@
 
 Tic - Tac - Toe
 
-In a world where blah blah blah life and death, good versus evil, internal moral struggles and shit.. the only thing that can save our protagonist is: WINNING A GAME OF TIC TAC TOE!!
+A pop culture take on the classic Tic-Tac-Toe game: two celebrity rivals are feuding to take over the world of hip-hop (represented as the tic-tac-toe board, naturally). Who will win? You decide!
 
 So here it is, a website that lets you play tic tac toe. This is how I designed it:
 
@@ -20,17 +20,21 @@ User Stories:
 
 "<game player> will <log in> to page"
 '<game player> will <create an account>
-<game player> will <sign out>
-<game player> will <plot a move> on <gameboard>
-<game player> will <plot another move>
-<game player> will <play again>'
+ <game player> will <sign out>
+ <game player> will <plot a move> on <gameboard>
+ <game player> will <plot another move>
+ <game player> will <play again>'
 '<user> will <create a username and password>
   <username> and <password> are <stored>
     a <blank game card> '
 
 Game modularity: I will keep my code modular by separating my javascript, html, and CSS into proper categories, utilizing objects and methods to keep my code DRY and extensivly researching code layout and structure to pick a code style that works well.
 
-Creative Spin: My tic tac toe game will have a Wizarding theme
+Creative Spin: My tic tac toe game will have a pop culture theme
+
+Technologies used: HTML, CSS, Javascript, jQuery
+
+Unsolved problems to be fixed: Connecting with the API to save and store games and connect them to authenticated users. I would love to make the style of the website more aesthetically pleasing. I will make images of Cardi B pop up instead of an "x", and Nicki Minaj will pop up instead of an "o".
 
 Version control: I will git commit and grunt deploy early and often
 
