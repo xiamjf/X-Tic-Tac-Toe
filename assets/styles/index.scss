@@ -1,0 +1,46 @@
+@import '~bootstrap/scss/bootstrap';
+
+$background-color: #800080;
+$row-color: #800080;
+$border-color: #fff;
+$square-color: #ffc0bc;
+$letter-x-color: #4e1863;
+$letter-o-color: #5199f7;
+
+h1 {
+  text-align: center;
+}
+
+img {
+  margin: auto;
+  max-width: 90%;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.gameboard {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  width: 450px;
+  }
+
+.row {
+  clear: both;
+}
+
+.square {
+  background-color: $square-color;
+  border: 1px solid $border-color;
+  cursor: pointer;
+  height: 150px;
+  width: 150px;
+}
+
+.letter-o {
+  background-color: $letter-o-color;
+}
+
+.letter-x {
+  background-color: $letter-x-color;
+}
