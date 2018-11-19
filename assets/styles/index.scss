@@ -11,6 +11,13 @@ h1 {
   text-align: center;
 }
 
+img {
+  margin: auto;
+  max-width: 90%;
+  object-fit: contain;
+  padding: 10px;
+}
+
 .gameboard {
   display: flex;
   flex-wrap: wrap;

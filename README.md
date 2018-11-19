@@ -34,7 +34,7 @@ Creative Spin: My tic tac toe game will have a pop culture theme
 
 Technologies used: HTML, CSS, Javascript, jQuery
 
-Unsolved problems to be fixed: Connecting with the API to save and store games and connect them to authenticated users. I would love to make the style of the website more aesthetically pleasing. I will make images of Cardi B pop up instead of an "x", and Nicki Minaj will pop up instead of an "o".
+Unsolved problems to be fixed: Connecting with the API to save and store games and connect them to authenticated users. I would love to make the style of the website more aesthetically pleasing. I will make images of Cardi B pop up instead of an "x", and Nicki Minaj will pop up instead of an "o".ve
 
 Version control: I will git commit and grunt deploy early and often
 
